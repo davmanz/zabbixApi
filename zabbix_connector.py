@@ -95,13 +95,14 @@ class ZabbixManager:
         except Exception as e:
             print(f"❌ Failed to export CSV: {e}")
 
-    def create_host(self, hostname, ip, group_ids, tags=None, templates=None, visible_name=None, ping_only=False):
+    def create_host(self, hostname, ip, group_ids, description=None, tags=None, templates=None, visible_name=None, ping_only=False):
         """
         Crea un nuevo host en Zabbix.
 
         :param hostname: Nombre técnico (único) del host
         :param ip: Dirección IP del host
         :param group_ids: Lista de IDs de grupo (como strings)
+        :param description: Descripción del host (opcional)
         :param tags: Lista de diccionarios [{'tag': 'marca', 'value': 'HP'}]
         :param templates: Lista de plantillas [{'templateid': '10001'}]
         :param visible_name: Nombre visible del host (opcional)
@@ -124,7 +125,7 @@ class ZabbixManager:
                 "host": hostname,
                 "interfaces": [
                     {
-                        "type": 1,       # Zabbix agent (simbólico)
+                        "type": 1,
                         "main": 1,
                         "useip": 1,
                         "ip": ip,
@@ -132,7 +133,8 @@ class ZabbixManager:
                         "port": "10050"
                     }
                 ],
-                "groups": [{"groupid": gid} for gid in group_ids]
+                "groups": [{"groupid": gid} for gid in group_ids],
+                "description": description or None
             }
 
             if visible_name:
@@ -207,6 +209,7 @@ class ZabbixManager:
                     ip = row["ip"].strip()
                     group_ids = [gid.strip() for gid in row["group_ids"].split(",") if gid.strip()]
                     visible_name = row.get("visible_name", "").strip() or None
+                    description = row.get("description", "").strip() or None
                     ping_only = row.get("ping_only", "false").strip().lower() == "true"
 
                     # Construcción de tags
@@ -235,6 +238,7 @@ class ZabbixManager:
                         tags=tags,
                         templates=templates,
                         visible_name=visible_name,
+                        description=description,
                         ping_only=ping_only
                     )
 

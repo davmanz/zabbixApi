@@ -180,7 +180,7 @@ class ZabbixManager:
         try:
             templates = self.zapi.template.get(output=["templateid", "name"])
             for t in templates:
-                if "icmp ping" in t["name"].lower():
+                if "ICMP Ping 5 minutos" in t["name"]:
                     return t["templateid"]
             return None
         except Exception as e:

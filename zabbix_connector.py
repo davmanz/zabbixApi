@@ -189,6 +189,26 @@ class ZabbixManager:
             print(f"❌ Error buscando plantilla de ping: {e}")
             return None
 
+    def get_templates(self, template_names=None):
+        """
+        Obtiene una lista de todas las plantillas o filtra por nombre.
+
+        :param template_names: Lista de nombres de plantillas para filtrar (opcional).
+        :return: Lista de diccionarios de plantillas.
+        """
+        print("🔍 Obteniendo plantillas desde Zabbix...")
+        try:
+            params = {"output": ["templateid", "name"]}
+            if template_names:
+                params["filter"] = {"name": template_names}
+            
+            templates = self.zapi.template.get(**params)
+            print(f"✅ Se encontraron {len(templates)} plantillas.")
+            return templates
+        except Exception as e:
+            print(f"❌ Error al obtener las plantillas: {e}")
+            return []
+
     def create_host_csv(self, filename="hosts_import.csv"):
         """
         Crea múltiples hosts a partir de un archivo CSV.

@@ -1,116 +1,60 @@
 from dotenv import load_dotenv
 import os
+import sys
 from zabbix_connector import ZabbixManager
 
 load_dotenv()
 
 ZP_KEY = os.getenv("ZABBIX_API")
-ZB_SERVER = os.getenv("ZABIX_SERVER")
-
-# Lista de IPs a buscar
-IP_LIST = [
-    "10.225.39.120",
-    "10.225.39.121",
-    "10.225.39.122",
-    "10.225.39.123",
-    "10.225.39.124",
-    "10.225.39.125",
-    "10.225.39.126",
-    "10.225.39.127",
-    "10.225.39.128",
-    "10.225.39.129",
-    "10.225.39.130",
-    "10.225.39.131",
-    "10.225.39.132",
-    "10.225.39.133",
-    "10.225.39.134",
-    "10.225.39.135",
-    "10.225.39.136",
-    "10.225.39.137",
-    "10.225.39.138",
-    "10.225.39.139",
-    "10.225.39.140",
-    "10.225.39.141",
-    "10.225.39.142",
-    "10.227.39.120",
-    "10.227.39.121",
-    "10.227.39.122",
-    "10.227.39.123",
-    "10.227.39.124",
-    "10.227.39.125",
-    "10.227.39.126",
-    "10.227.39.127",
-    "10.227.39.128",
-    "10.227.39.129",
-    "10.227.39.130",
-    "10.227.39.131",
-    "10.227.39.132",
-    "10.227.39.133",
-    "10.227.39.134",
-    "10.227.39.135",
-    "10.227.39.136",
-    "10.227.39.137",
-    "10.227.39.138",
-    "10.227.39.139",
-    "10.224.39.120",
-    "10.224.39.121",
-    "10.224.39.122",
-    "10.224.39.123",
-    "10.224.39.124",
-    "10.224.39.125",
-    "10.224.39.126",
-    "10.224.39.127",
-    "10.224.39.128",
-    "10.224.39.129",
-    "10.224.39.130",
-    "10.224.39.131",
-    "10.224.39.132",
-    "10.226.39.120",
-    "10.226.39.121",
-    "10.226.39.122",
-    "10.226.39.123",
-    "10.226.39.124",
-    "10.226.39.125",
-    "10.226.39.126",
-    "10.226.39.127",
-    "10.226.39.128",
-    "10.226.39.129",
-    "10.226.39.130",
-    "10.226.39.131",
-    "10.226.39.132",
-    "10.226.39.133",
-    "10.226.39.134",
-    "10.226.39.135",
-    "10.226.39.136",
-    "10.226.39.137",
-    "10.226.39.138",
-    "10.226.39.139",
-    "10.226.39.140",
-]
+ZB_SERVER = os.getenv("ZABBIX_SERVER")
 
 def find_hosts_by_ip(zb, ip_list):
-    hosts = zb.get_raw_hosts()
-    found = []
+    """
+    Busca hosts en Zabbix que coincidan con una lista de IPs.
+    """
+    if not ip_list:
+        print("⚠️ No se proporcionaron IPs para buscar.")
+        return []
 
-    for host in hosts:
-        for iface in host.get("interfaces", []):
-            ip = iface.get("ip")
-            if ip in ip_list:
-                found.append({
-                    "hostid": host["hostid"],
-                    "host": host["host"],
-                    "ip": ip
-                })
-                break
-
-    return found
+    # Prepara el filtro para la API de Zabbix
+    search_filter = {"ip": ip_list}
+    
+    try:
+        # Llama a la API con el filtro
+        hosts = zb.zapi.host.get(
+            output=["hostid", "host", "name"],
+            selectInterfaces=["ip"],
+            filter=search_filter
+        )
+        return hosts
+    except Exception as e:
+        print(f"❌ Error al buscar hosts por IP: {e}")
+        return []
 
 if __name__ == "__main__":
+    # Verifica si se pasaron IPs como argumentos
+    if len(sys.argv) < 2:
+        print("Uso: python zabbix_get_host_by_ip.py <ip1> <ip2> ... <ipN>")
+        sys.exit(1)
+
+    # Extrae las IPs de los argumentos de la línea de comandos
+    ip_list_to_find = sys.argv[1:]
+
+    # Conecta con Zabbix
     zb = ZabbixManager(url=f"http://{ZB_SERVER}/api_jsonrpc.php", token=ZP_KEY)
     zb.connect()
 
-    matching_hosts = find_hosts_by_ip(zb, IP_LIST)
+    # Busca los hosts
+    matching_hosts = find_hosts_by_ip(zb, ip_list_to_find)
 
-    print("🖥️ Hosts encontrados por IP:")
-    for h in matching_hosts:
-        print(f"➡️ {h['host']} (ID: {h['hostid']}, IP: {h['ip']})")
+    if matching_hosts:
+        print("🖥️ Hosts encontrados por IP:")
+        for host in matching_hosts:
+            # Extrae la IP de la interfaz para mostrarla
+            ip_found = "N/A"
+            if host.get("interfaces"):
+                ip_found = host["interfaces"][0]["ip"]
+            
+            print(f"➡️ {host['host']} (ID: {host['hostid']}, IP: {ip_found})")
+    else:
+        print("🤷 No se encontraron hosts para las IPs proporcionadas.")

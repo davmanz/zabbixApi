@@ -1,0 +1,122 @@
+Hostname,IP,País,Sitio,Area,Fabricante
+PE-MCO-TI-SW-01,10.226.50.2,Perú,Comas,Administracion,Cisco
+PE-OPATO-SW-CORE,10.234.50.1,Perú,Atocongo,COP,Cisco
+PE-OPLAM-SW-CORE,10.235.50.1,Perú,La Marina,COP,Cisco
+PE-OPPIU-SW-CORE-01,10.232.50.1,Perú,Piura,COP,Cisco
+PE-OPHUA-SW-CORE-01,10.233.50.1,Perú,Huancayo,COP,Cisco
+PE-OPANG-SW-CORE-01,10.231.50.1,Perú,Angamos,COP,Cisco
+SW_COP_MPB_Z9_Bubble_Gummers,10.225.50.13,Perú,Bella Vista,COP,Huawei
+SW_COP_RACK6_MPT,10.227.50.16,Perú,Trujilo,Administracion,Huawei
+SW03_TRUJILLO,10.227.50.5,Perú,Trujilo,Administracion,Cisco
+SW02_TRUJILLO,10.227.50.3,Perú,Trujilo,Administracion,Cisco
+SW01_TRUJILLO,10.227.50.4,Perú,Trujilo,Administracion,Cisco
+SW_TIC_RACK3_MPT,10.227.50.23,Perú,Trujilo,Administracion,Huawei
+SW_TIC_RACK2_MPT,10.227.50.22,Perú,Trujilo,Administracion,Huawei
+SW_TIC_RACK4_MPT,10.227.50.24,Perú,Trujilo,Administracion,Huawei
+SW_TIC_RACK1_MPT,10.227.50.21,Perú,Trujilo,Administracion,Huawei
+SW_TIC_RACK7_MPT,10.227.50.26,Perú,Trujilo,Administracion,Huawei
+SW_TIC_RACK6_MPT,10.227.50.25,Perú,Trujilo,Administracion,Huawei
+CORE-TIC-MPT,10.227.50.20,Perú,Trujilo,Administracion,Huawei
+SistemasCCTV,10.227.50.18,Perú,Trujilo,COP,Cisco
+SWITCHCITOFONIA,10.227.50.19,Perú,Trujilo,COP,Cisco
+CORE_COP_MPT,10.227.50.10,Perú,Trujilo,COP,Huawei
+SW_COP_RACK5_MPT,10.227.50.15,Perú,Trujilo,COP,Huawei
+SW_COP_RACK7_MPT,10.227.50.17,Perú,Trujilo,COP,Huawei
+SW_COP_RACK4_MPT,10.227.50.14,Perú,Trujilo,COP,Huawei
+SW_COP_RACK3_MPT,10.227.50.13,Perú,Trujilo,COP,Huawei
+SW_COP_RACK1_MPT,10.227.50.11,Perú,Trujilo,COP,Huawei
+SW_COP_RACK2_MPT,10.227.50.12,Perú,Trujilo,COP,Huawei
+MPTJ-SW-CyC,10.227.50.27,Perú,Trujilo,Administracion,Cisco
+SW_CORE_TRUJILLO,10.227.50.1,Perú,Trujilo,Administracion,Cisco
+SW_TIC_RACK14_MPB,10.225.50.38,Perú,Bella Vista,Administracion,Huawei
+SW_TIC_RACK13_MPB,10.225.50.37,Perú,Bella Vista,Administracion,Huawei
+SW_TIC_RACK12_MPB,10.225.50.36,Perú,Bella Vista,Administracion,Huawei
+SW_TIC_RACK11_MPB,10.225.50.35,Perú,Bella Vista,Administracion,Huawei
+SW_TIC_RACK10_MPB,10.225.50.34,Perú,Bella Vista,Administracion,Huawei
+SW_TIC_RACK9_MPB,10.225.50.33,Perú,Bella Vista,Administracion,Huawei
+SW_TIC_RACK8_MPB,10.225.50.32,Perú,Bella Vista,Administracion,Huawei
+SW_TIC_RACK7_MPB,10.225.50.31,Perú,Bella Vista,Administracion,Huawei
+SW_TIC_RACK6_MPB,10.225.50.30,Perú,Bella Vista,Administracion,Huawei
+SW_TIC_MPB_Z3,10.225.50.29,Perú,Bella Vista,Administracion,Huawei
+SW-TIC-MPB_Clinica,10.225.50.28,Perú,Bella Vista,Administracion,Huawei
+SW_TIC_MPB_Z9_Bubble_Gummers,10.225.50.27,Perú,Bella Vista,Administracion,Huawei
+SW_TIC_MPB-Happy_Land,10.225.50.26,Perú,Bella Vista,Administracion,Huawei
+SW_TIC_Boulevard_Financiero,10.225.50.25,Perú,Bella Vista,Administracion,Huawei
+CORE-TIC-MPB,10.225.50.9,Perú,Bella Vista,Administracion,Huawei
+SW1_Distribucion,10.225.50.3,Perú,Bella Vista,Administracion,Cisco
+SW3_Sistemas,10.225.50.4,Perú,Bella Vista,Administracion,Cisco
+PE-PBE-COP-SW-03,10.225.50.5,Perú,Bella Vista,Administracion,Cisco
+CORE_COP_MPB,10.225.50.10,Perú,Bella Vista,COP,Huawei
+SW_COP_RACK14_MPB,10.225.50.24,Perú,Bella Vista,COP,Huawei
+SW_COP_RACK13_MPB,10.225.50.23,Perú,Bella Vista,COP,Huawei
+SW_COP_RACK12_MPB,10.225.50.22,Perú,Bella Vista,COP,Huawei
+SW_COP_RACK11_MPB,10.225.50.21,Perú,Bella Vista,COP,Huawei
+SW_COP_RACK10_MPB,10.225.50.20,Perú,Bella Vista,COP,Huawei
+SW_COP_RACK9_MPB,10.225.50.19,Perú,Bella Vista,COP,Huawei
+SW_COP_RACK8_MPB,10.225.50.18,Perú,Bella Vista,COP,Huawei
+SW_COP_RACK7_MPB,10.225.50.17,Perú,Bella Vista,COP,Huawei
+SW_COP_RACK6_MPB,10.225.50.16,Perú,Bella Vista,COP,Huawei
+SW-COP-MPB_Z3,10.225.50.15,Perú,Bella Vista,COP,Huawei
+SW-COP-MPB_Clinica,10.225.50.14,Perú,Bella Vista,COP,Huawei
+SW-COP-MPB-Happy_Land,10.225.50.12,Perú,Bella Vista,COP,Huawei
+SW_COP_MPB_Boulevard_Financiero,10.225.50.11,Perú,Bella Vista,COP,Huawei
+PE-PBE-SW-CORE-01,10.225.50.1,Perú,Bella Vista,Administracion,Cisco
+SW-TIC01-B1-PO2-RACK-01,10.226.50.67,Perú,Comas,Administracion,Huawei
+SW-TIC01-B1-P01-Rack-02,10.226.50.66,Perú,Comas,Administracion,Huawei
+SW-TIC01-B1-S01-RACK-01,10.226.50.65,Perú,Comas,Administracion,Huawei
+SW-TIC01-PO2-RACK-02,10.226.50.64,Perú,Comas,Administracion,Huawei
+SW-TIC01-B1-P01-RACK-SCC-01,10.226.50.63,Perú,Comas,Administracion,Huawei
+SW-TIC01-PO3-RACK-03,10.226.50.62,Perú,Comas,Administracion,Huawei
+SW-TIC01-PO3-RACK-04,10.226.50.61,Perú,Comas,Administracion,Huawei
+SW-TIC01-PO3-RACK-01,10.226.50.60,Perú,Comas,Administracion,Huawei
+SW-TIC01-B1-PO2-RACK-02,10.226.50.59,Perú,Comas,Administracion,Huawei
+SW-TIC01-S02-RACK-04,10.226.50.58,Perú,Comas,Administracion,Huawei
+SW-TIC01-S02-RACK-03,10.226.50.57,Perú,Comas,Administracion,Huawei
+SW-TIC01- P01-RACK-05,10.226.50.56,Perú,Comas,Administracion,Huawei
+SW-TIC01-P01-RACK-04,10.226.50.55,Perú,Comas,Administracion,Huawei
+SW-TIC01-P02-RACK-01,10.226.50.54,Perú,Comas,Administracion,Huawei
+SW-TIC01-PO2-RACK-04,10.226.50.53,Perú,Comas,Administracion,Huawei
+SW-TIC01- PO2-RACK-03,10.226.50.52,Perú,Comas,Administracion,Huawei
+CORE-TIC-MP_Comas,10.226.50.51,Perú,Comas,Administracion,Huawei
+SW-P02-B2-SCC-02,10.226.50.50,Perú,Comas,Administracion,Cisco
+SW-P02-B2-05,10.226.50.49,Perú,Comas,Administracion,Cisco
+SW-S01-B1-04,10.226.50.48,Perú,Comas,Administracion,Huawei
+SW-S01-B1-03,10.226.50.47,Perú,Comas,Administracion,Huawei
+SW-S01-B1-02,10.226.50.46,Perú,Comas,Administracion,Huawei
+SW-S01-B1-01,10.226.50.45,Perú,Comas,Administracion,Huawei
+SW-P02-B1-01,10.226.50.44,Perú,Comas,Administracion,Huawei
+SW-P02-B1-02,10.226.50.43,Perú,Comas,Administracion,Huawei
+CORE1-P01-B1,10.226.50.4,Perú,Comas,Administracion,Huawei
+SW-P01-B1-01,10.226.50.41,Perú,Comas,Administracion,Huawei
+SW-P01-B1-SCC-01,10.226.50.40,Perú,Comas,Administracion,Huawei
+SW-P02-B2-02,10.226.50.39,Perú,Comas,Administracion,Huawei
+SW-P02-B2-01,10.226.50.38,Perú,Comas,Administracion,Huawei
+SW-P12-B2-01,10.226.50.37,Perú,Comas,Administracion,Huawei
+SW-P04-B2-01,10.226.50.36,Perú,Comas,Administracion,Huawei
+SW-P03-B2-03,10.226.50.35,Perú,Comas,Administracion,Huawei
+SW-P03-B2-02,10.226.50.34,Perú,Comas,Administracion,Huawei
+SW-P03-B2-04,10.226.50.33,Perú,Comas,Administracion,Huawei
+SW-P03-B2-01,10.226.50.32,Perú,Comas,Administracion,Huawei
+SW-S03-B2-01,10.226.50.31,Perú,Comas,Administracion,Huawei
+SW-S03-B2-03,10.226.50.30,Perú,Comas,Administracion,Huawei
+SW-P02-B02-Huawei-SFlujos,10.226.50.3,Perú,Comas,Administracion,Huawei
+SW-S03-B2-05,10.226.50.29,Perú,Comas,Administracion,Huawei
+SW-S03-B2-02,10.226.50.28,Perú,Comas,Administracion,Huawei
+SW-S03-B2-04,10.226.50.27,Perú,Comas,Administracion,Huawei
+SW-S01-B2-01,10.226.50.26,Perú,Comas,Administracion,Huawei
+SW-S02-B2-05,10.226.50.25,Perú,Comas,Administracion,Huawei
+SW-S02-B2-04,10.226.50.24,Perú,Comas,Administracion,Huawei
+SW-S02-B2-03,10.226.50.23,Perú,Comas,Administracion,Huawei
+SW-S02-B2-02,10.226.50.22,Perú,Comas,Administracion,Huawei
+SW-S01-B2-02,10.226.50.21,Perú,Comas,Administracion,Huawei
+SW-S02-B2-01,10.226.50.20,Perú,Comas,Administracion,Huawei
+SW-P01-B2-05,10.226.50.19,Perú,Comas,Administracion,Huawei
+SW-P01-B2-04,10.226.50.18,Perú,Comas,Administracion,Huawei
+SW-P01-B2-06,10.226.50.17,Perú,Comas,Administracion,Huawei
+SW-P01-B2-03,10.226.50.16,Perú,Comas,Administracion,Huawei
+SW-P01-B2-02,10.226.50.15,Perú,Comas,Administracion,Huawei
+SW-P01-B2-01,10.226.50.14,Perú,Comas,Administracion,Huawei
+SW-P02-B2-04,10.226.50.13,Perú,Comas,Administracion,Huawei
+SW-P02-B2-03,10.226.50.12,Perú,Comas,Administracion,Huawei
+SW-P02-B2-SCC-01,10.226.50.11,Perú,Comas,Administracion,Huawei
+CORE1-P02-B2,10.226.50.1,Perú,Comas,Administracion,Huawei

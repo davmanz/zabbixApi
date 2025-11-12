@@ -264,3 +264,14 @@ class ZabbixManager:
 
         except Exception as e:
             print(f"❌ Error leyendo CSV: {e}")
+
+    def get_all_host_names(self):
+        """
+        Obtiene una lista de todos los nombres de host en Zabbix.
+        """
+        try:
+            hosts = self.zapi.host.get(output=["host"])
+            return [host['host'] for host in hosts]
+        except Exception as e:
+            print(f"❌ Error al obtener nombres de host: {e}")
+            return []

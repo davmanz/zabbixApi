@@ -1,2 +1,0 @@
-hostname,ip,group_ids,visible_name,tags,templates,ping_only
-EQUIPO1,192.168.1.1,00,EQUIPO1,tag=deseado,SI PING ES TRU QUEDA VACIO, SI PING ES FALSE SE DEBE COLOCAR UN ID DE TAMPLETE,TRUE
